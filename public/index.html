@@ -12,11 +12,12 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Coding Challenges conquered</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -32,14 +33,14 @@
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#"
-                            >Home <span class="sr-only">(current)</span></a
+                            >My GitHub <span class="sr-only">(current)</span></a
                         >
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">My Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">My LinkedIn</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
@@ -51,14 +52,18 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                         >
-                            Dropdown link
+                            Personal projects
                         </a>
                         <div
                             class="dropdown-menu"
                             aria-labelledby="navbarDropdownMenuLink"
                         >
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#"
+                                >try my youtube fro in depth anlysis</a
+                            >
+                            <a class="dropdown-item" href="#"
+                                >Check my portfolio page for my other webApps</a
+                            >
                             <a class="dropdown-item" href="#"
                                 >Something else here</a
                             >
@@ -67,10 +72,144 @@
                 </ul>
             </div>
         </nav>
+        <!--jumbotron-->
+        <div class="jumbotron jumbotron-fluid translucent">
+            <div class="container">
+                <h1 class="display-4">algorithym tests for the aspiring dev</h1>
+                <p class="lead">
+                    Below are a few working solutions to some common alorithym
+                    questions you might encouter in your search for a dev role!
+                </p>
+            </div>
+        </div>
+        <!--collapsable-->
+        <div class="border_standard">
+            <div class="accordion border_standard" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                            >
+                                fizzBuzz
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div
+                        id="collapseOne"
+                        class="collapse show"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionExample"
+                    >
+                        <div class="card-body">
+                            a classic coding problem
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button
+                                class="btn btn-link collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                            >
+                                palindromes
+                            </button>
+                        </h2>
+                    </div>
+                    <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionExample"
+                    >
+                        <div class="card-body">
+                            palidromes are words spelled the same forward or
+                            backward, like racecar.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button
+                                class="btn btn-link collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                            >
+                                Return negatives
+                            </button>
+                        </h2>
+                    </div>
+                    <div
+                        id="collapseThree"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionExample"
+                    >
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod
+                            high life accusamus terry richardson ad squid. 3
+                            wolf moon officia aute, non cupidatat skateboard
+                            dolor brunch. Food truck quinoa nesciunt laborum
+                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
+                            a bird on it squid single-origin coffee nulla
+                            assumenda shoreditch et. Nihil anim keffiyeh
+                            helvetica, craft beer labore wes anderson cred
+                            nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher vice lomo. Leggings occaecat craft beer
+                            farm-to-table, raw denim aesthetic synth nesciunt
+                            you probably haven't heard of them accusamus labore
+                            sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                            >
+                                Remove duplicates
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div
+                        id="collapseOne"
+                        class="collapse show"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionExample"
+                    >
+                        <div class="card-body">
+                            a classic coding problem
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- bootstrap script -->
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/Javascript/game.js"></script>
+
     <script
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"

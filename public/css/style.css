@@ -1,0 +1,9 @@
+.border_standard {
+    padding: 5em;
+}
+body {
+    background-image: url(../images/coding.jpg);
+}
+.translucent {
+    opacity: 0.5;
+}
