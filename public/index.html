@@ -134,8 +134,34 @@
                         data-parent="#accordionExample"
                     >
                         <div class="card-body">
-                            palidromes are words spelled the same forward or
-                            backward, like racecar.
+                            <div class="row">
+                                palidromes are words spelled the same forward or
+                                backward, like racecar. Enter in a word and
+                                check to see if its a palidrome
+                            </div>
+                            <div class="row">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control palBox"
+                                            aria-label="Text input with segmented dropdown button"
+                                        />
+                                        <div class="input-group-append">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-info"
+                                                data-toggle="popover"
+                                                data-trigger="hover"
+                                                data-content="If no site is selected we search for the top result."
+                                                id="palBtn"
+                                            >
+                                                Test
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,15 +204,15 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                             <button
                                 class="btn btn-link"
                                 type="button"
                                 data-toggle="collapse"
-                                data-target="#collapseOne"
+                                data-target="#collapseFour"
                                 aria-expanded="true"
-                                aria-controls="collapseOne"
+                                aria-controls="collapseFour"
                             >
                                 Remove duplicates
                             </button>
@@ -194,9 +220,9 @@
                     </div>
 
                     <div
-                        id="collapseOne"
+                        id="collapseFour"
                         class="collapse show"
-                        aria-labelledby="headingOne"
+                        aria-labelledby="headingFour"
                         data-parent="#accordionExample"
                     >
                         <div class="card-body">
@@ -215,4 +241,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"
     ></script>
+    <script src="./js/main.js"></script>
 </html>
