@@ -7,3 +7,13 @@ body {
 .translucent {
     opacity: 0.5;
 }
+.jumbotron-fluid {
+    margin: 3em;
+}
+
+.noPadR {
+    padding-right: 0%;
+}
+.noPadL {
+    padding-left: 0%;
+}
