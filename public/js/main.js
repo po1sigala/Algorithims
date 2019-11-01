@@ -67,4 +67,19 @@ $(document).ready(function() {
                 console.log(uniquesOnly);
             }
         });
+    const fizzBuzz = number => {
+        //if number is divisible by three return fizz if divisible by 5 return buzz else return the number
+        let numArray = number.split("");
+        numArray.forEach(number => {
+            if (number % 15 === 0) {
+                return "FizzBuzz";
+            } else if (number % 5 === 0) {
+                return "Buzz";
+            } else if (number % 3) {
+                return "Fizz";
+            } else {
+                return number;
+            }
+        });
+    };
 });
