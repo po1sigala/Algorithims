@@ -44,13 +44,10 @@ $(document).ready(function() {
     $(document).on("click", "#fizzBuzz", function() {
         console.log("fizz buzzing");
         //turn parse the strings to an integer so that if the user accidentally puts in non number we can get mad at him for it
-        let fizzArry = $(".fizzBox")
-            .val()
-            .split(" ");
-        console.log(`the entry to be fizz buzzed is ${fizzArry}`);
-        fizzArry.forEach(number => {
-            fizzBuzz(number);
-        });
+        let toBeFizzBuzzed = $(".fizzBox").val();
+        console.log(`the entry to be fizz buzzed is ${toBeFizzBuzzed}`);
+
+        fizzBuzz(toBeFizzBuzzed);
     });
 
     //--------------------FUNCTIONS--------------------------------------------
@@ -79,9 +76,9 @@ $(document).ready(function() {
                 console.log(uniquesOnly);
             }
         });
-    const fizzBuzz = number => {
+    const fizzBuzz = stringOfNumbers => {
         //if number is divisible by three return fizz if divisible by 5 return buzz else return the number
-        let numArray = number.split(" ");
+        let numArray = stringOfNumbers.split(" ");
         let fizzBuzzedArry = [];
         numArray.forEach(number => {
             let result;
@@ -110,7 +107,7 @@ $(document).ready(function() {
                 console.log(number);
             }
         });
-        alert(`
-        FizzBuzzed Version is ${fizzBuzzedArry}`);
+        alert(` original list was ${stringOfNumbers}
+        \n FizzBuzzed Version is ${fizzBuzzedArry}`);
     };
 });
