@@ -41,6 +41,18 @@ $(document).ready(function() {
             ` you entered ${uniquesOnly.length} unique inputs. they are: ${uniquesOnly}`
         );
     });
+    $(document).on("click", "#fizzBuzz", function() {
+        console.log("fizz buzzing");
+        //turn parse the strings to an integer so that if the user accidentally puts in non number we can get mad at him for it
+        let fizzArry = $(".fizzBox")
+            .val()
+            .split(" ");
+        console.log(`the entry to be fizz buzzed is ${fizzArry}`);
+        fizzArry.forEach(number => {
+            fizzBuzz(number);
+        });
+    });
+
     //--------------------FUNCTIONS--------------------------------------------
     const palCheck = inputText => {
         let reveresedArray = [];
@@ -69,17 +81,36 @@ $(document).ready(function() {
         });
     const fizzBuzz = number => {
         //if number is divisible by three return fizz if divisible by 5 return buzz else return the number
-        let numArray = number.split("");
+        let numArray = number.split(" ");
+        let fizzBuzzedArry = [];
         numArray.forEach(number => {
+            let result;
+
             if (number % 15 === 0) {
-                return "FizzBuzz";
+                result = number % 15;
+                console.log("this is divisible by 15");
+                console.log(`${number} divided by 15 was ${result}`);
+                fizzBuzzedArry.push(`FizzBuzz`);
+                return;
             } else if (number % 5 === 0) {
-                return "Buzz";
-            } else if (number % 3) {
-                return "Fizz";
+                result = number % 5;
+
+                console.log("this is divisible by 5");
+                console.log(`result of division is ${result}`);
+                fizzBuzzedArry.push("Buzz");
+                console.log("buzz");
+            } else if (number % 3 === 0) {
+                result = number % 3;
+                console.log("this is divisible by 3");
+                console.log(`result of division is ${result}`);
+                fizzBuzzedArry.push("fizz");
+                console.log("fizz");
             } else {
-                return number;
+                fizzBuzzedArry.push(number);
+                console.log(number);
             }
         });
+        alert(`
+        FizzBuzzed Version is ${fizzBuzzedArry}`);
     };
 });
