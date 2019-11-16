@@ -1,5 +1,7 @@
 $(document).ready(function() {
     console.log("logic loaded");
+
+    //----------------------------  CLICK HANDLERS---------------------------------------------------------------
     // run palindrom algo when palbtn clicked
     $(document).on("click", "#palBtn", function() {
         //get the input string to check
@@ -12,16 +14,7 @@ $(document).ready(function() {
     //run remove duplicates when noDup clicked
     $(document).on("click", "#noDup", function() {
         console.log("clicked noDup");
-        //convert the input seperated by spaces into an array.
-        /*[a,c,c,d,f,g,g]
-        0,a
-        1,c
-        2,c
-        3,d
-        4,f
-        5,g
-        6,g
-        */
+
         let inputArray = $(".dupBox")
             .val()
             .toString()
@@ -29,7 +22,6 @@ $(document).ready(function() {
         console.log(`initial input as an array is ${inputArray}`);
         let uniquesOnly = [];
         for (i = 0; i < inputArray.length; i++) {
-            // filterUnique(inputArray[i], i);
             //when it is a repeat the index of input will be less than the current i
             if (inputArray.indexOf(inputArray[i]) === i) {
                 //if its a uniquq push it to the unique array
@@ -41,6 +33,7 @@ $(document).ready(function() {
             ` you entered ${uniquesOnly.length} unique inputs. they are: ${uniquesOnly}`
         );
     });
+    //run fizz buzz algo when fizzbox clicked
     $(document).on("click", "#fizzBuzz", function() {
         console.log("fizz buzzing");
         //turn parse the strings to an integer so that if the user accidentally puts in non number we can get mad at him for it
@@ -48,6 +41,12 @@ $(document).ready(function() {
         console.log(`the entry to be fizz buzzed is ${toBeFizzBuzzed}`);
 
         fizzBuzz(toBeFizzBuzzed);
+    });
+    $(document).on("click", "#negBtn", function() {
+        console.log(`clicked`);
+        let toBecomeNegative = $(".negBox").val();
+        console.log(`turning ${toBecomeNegative} to a negative integer`);
+        returnNeg(toBecomeNegative);
     });
 
     //--------------------FUNCTIONS--------------------------------------------
@@ -110,4 +109,16 @@ $(document).ready(function() {
         alert(` original list was ${stringOfNumbers}
         \n FizzBuzzed Version is ${fizzBuzzedArry}`);
     };
+    function returnNeg(str) {
+        let stringToInt = parseInt(str);
+        console.log(`input string as a integeree returns as ${stringToInt}`);
+        if (stringToInt < 0) {
+            alert("That number is already negative");
+        } else if (stringToInt > 0) {
+            str = "-" + str;
+            alert(parseInt(str));
+        } else {
+            alert("That's not a number");
+        }
+    }
 });

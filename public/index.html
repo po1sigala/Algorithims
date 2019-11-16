@@ -228,21 +228,34 @@
                                 data-parent="#accordionExample"
                             >
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim
-                                    eiusmod high life accusamus terry richardson
-                                    ad squid. 3 wolf moon officia aute, non
-                                    cupidatat skateboard dolor brunch. Food
-                                    truck quinoa nesciunt laborum eiusmod.
-                                    Brunch 3 wolf moon tempor, sunt aliqua put a
-                                    bird on it squid single-origin coffee nulla
-                                    assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica, craft beer labore wes anderson
-                                    cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur butcher vice lomo. Leggings
-                                    occaecat craft beer farm-to-table, raw denim
-                                    aesthetic synth nesciunt you probably
-                                    haven't heard of them accusamus labore
-                                    sustainable VHS.
+                                    <div class="row">
+                                        A function that takes an input and
+                                        returns the negative version. if a non
+                                        integer is entered it returns an error.
+                                    </div>
+                                    <div class="row">
+                                        <form class="form-inline my-2 my-lg-0">
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control negBox"
+                                                    aria-label="Text input with segmented dropdown button"
+                                                />
+                                                <div class="input-group-append">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-info"
+                                                        data-toggle="popover"
+                                                        data-trigger="hover"
+                                                        data-content="If no site is selected we search for the top result."
+                                                        id="negBtn"
+                                                    >
+                                                        Test
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +332,7 @@
                                         aria-expanded="true"
                                         aria-controls="collapseOne"
                                     >
-                                        fizzBuzz
+                                        solution
                                     </button>
                                 </h2>
                             </div>
@@ -331,7 +344,46 @@
                                 data-parent="#accordion2"
                             >
                                 <div class="card-body">
-                                    a classic coding problem
+                                    <div class="row"></div>
+                                    <div class="row">
+                                        <pre>
+                                        const fizzBuzz = stringOfNumbers => {
+                                            //if number is divisible by three return fizz if divisible by 5 return buzz else return the number
+                                            let numArray = stringOfNumbers.split(" ");
+                                            let fizzBuzzedArry = [];
+                                            numArray.forEach(number => {
+                                                let result;
+                                    
+                                                if (number % 15 === 0) {
+                                                    result = number % 15;
+                                                    console.log("this is divisible by 15");
+                                                    console.log(`${number} divided by 15 was ${result}`);
+                                                    fizzBuzzedArry.push(`FizzBuzz`);
+                                                    return;
+                                                } else if (number % 5 === 0) {
+                                                    result = number % 5;
+                                    
+                                                    console.log("this is divisible by 5");
+                                                    console.log(`result of division is ${result}`);
+                                                    fizzBuzzedArry.push("Buzz");
+                                                    console.log("buzz");
+                                                } else if (number % 3 === 0) {
+                                                    result = number % 3;
+                                                    console.log("this is divisible by 3");
+                                                    console.log(`result of division is ${result}`);
+                                                    fizzBuzzedArry.push("fizz");
+                                                    console.log("fizz");
+                                                } else {
+                                                    fizzBuzzedArry.push(number);
+                                                    console.log(number);
+                                                }
+                                            });
+                                            alert(` original list was ${stringOfNumbers}
+                                            \n FizzBuzzed Version is ${fizzBuzzedArry}`);
+                                        };
+                                    </pre
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -346,7 +398,7 @@
                                         aria-expanded="false"
                                         aria-controls="collapseTwo"
                                     >
-                                        palindromes
+                                        solution
                                     </button>
                                 </h2>
                             </div>
@@ -358,33 +410,25 @@
                             >
                                 <div class="card-body">
                                     <div class="row">
-                                        palidromes are words spelled the same
-                                        forward or backward, like racecar. Enter
-                                        in a word and check to see if its a
-                                        palidrome
-                                    </div>
-                                    <div class="row">
-                                        <form class="form-inline my-2 my-lg-0">
-                                            <div class="input-group">
-                                                <input
-                                                    type="text"
-                                                    class="form-control palBox"
-                                                    aria-label="Text input with segmented dropdown button"
-                                                />
-                                                <div class="input-group-append">
-                                                    <button
-                                                        type="button"
-                                                        class="btn btn-outline-info"
-                                                        data-toggle="popover"
-                                                        data-trigger="hover"
-                                                        data-content="If no site is selected we search for the top result."
-                                                        id="palBtn"
-                                                    >
-                                                        Test
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <pre>
+                                            const palCheck = inputText => {
+                                                let reveresedArray = [];
+                                                for (i = 0; i < inputText.length; i++) {
+                                                    reveresedArray.push(inputText.charAt(inputText.length - i - 1));
+                                                    console.log(reveresedArray);
+                                                }
+                                                let inputReversed = reveresedArray.join("");
+                                                if (inputText === inputReversed) {
+                                                    console.log("yes");
+                                                    alert("yes that is a palidrome");
+                                                    return true;
+                                                } else {
+                                                    alert(`no ${inputReversed} is not the same as ${inputText}`);
+                                                    return false;
+                                                }
+                                            };
+                                       </pre
+                                        >
                                     </div>
                                 </div>
                             </div>
@@ -400,7 +444,7 @@
                                         aria-expanded="false"
                                         aria-controls="collapseThree"
                                     >
-                                        Return negatives
+                                        solution
                                     </button>
                                 </h2>
                             </div>
@@ -411,21 +455,21 @@
                                 data-parent="#accordion2"
                             >
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim
-                                    eiusmod high life accusamus terry richardson
-                                    ad squid. 3 wolf moon officia aute, non
-                                    cupidatat skateboard dolor brunch. Food
-                                    truck quinoa nesciunt laborum eiusmod.
-                                    Brunch 3 wolf moon tempor, sunt aliqua put a
-                                    bird on it squid single-origin coffee nulla
-                                    assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica, craft beer labore wes anderson
-                                    cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur butcher vice lomo. Leggings
-                                    occaecat craft beer farm-to-table, raw denim
-                                    aesthetic synth nesciunt you probably
-                                    haven't heard of them accusamus labore
-                                    sustainable VHS.
+                                    <pre>
+                                        function returnNeg(str) {
+                                            let stringToInt = parseInt(str);
+                                            console.log(`input string as a integeree returns as ${stringToInt}`);
+                                            if (stringToInt < 0) {
+                                                alert("That number is already negative");
+                                            } else if (stringToInt > 0) {
+                                                str = "-" + str;
+                                                alert(parseInt(str));
+                                            } else {
+                                                alert("That's not a number");
+                                            }
+                                        }
+                                  </pre
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -440,7 +484,7 @@
                                         aria-expanded="true"
                                         aria-controls="collapseFour"
                                     >
-                                        Remove duplicates
+                                        solution
                                     </button>
                                 </h2>
                             </div>
@@ -453,31 +497,20 @@
                             >
                                 <div class="card-body">
                                     <div class="row">
-                                        compares all inputs seperated by a space
-                                        and removes any duplicates
-                                    </div>
-                                    <div class="row">
-                                        <form class="form-inline my-2 my-lg-0">
-                                            <div class="input-group">
-                                                <input
-                                                    type="text"
-                                                    class="form-control dupBox"
-                                                    aria-label="Text input with segmented dropdown button"
-                                                />
-                                                <div class="input-group-append">
-                                                    <button
-                                                        type="button"
-                                                        class="btn btn-outline-info"
-                                                        data-toggle="popover"
-                                                        data-trigger="hover"
-                                                        data-content="If no site is selected we search for the top result."
-                                                        id="noDup"
-                                                    >
-                                                        Test
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <pre>
+                                                let uniquesOnly = [];
+                                                for (i = 0; i < inputArray.length; i++) {
+                                                    //when it is a repeat the index of input will be less than the current i
+                                                    if (inputArray.indexOf(inputArray[i]) === i) {
+                                                        //if its a uniquq push it to the unique array
+                                                        uniquesOnly.push(inputArray[i]);
+                                                        console.log(uniquesOnly);
+                                                    }
+                                                }
+                                                alert(
+                                                    ` you entered ${uniquesOnly.length} unique inputs. they are: ${uniquesOnly}`
+                                                );
+                                        </pre>
                                     </div>
                                 </div>
                             </div>
