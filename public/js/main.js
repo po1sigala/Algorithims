@@ -48,7 +48,14 @@ $(document).ready(function() {
         console.log(`turning ${toBecomeNegative} to a negative integer`);
         returnNeg(toBecomeNegative);
     });
-
+    $(document).on("click", "#repeatBtn", function() {
+        console.log("clicked repeat");
+        let arry = $(".repeatBox")
+            .val()
+            .split(" ");
+        console.log(`checking for repeats in ${arry}`);
+        returnFirstRecurring(arry);
+    });
     //--------------------FUNCTIONS--------------------------------------------
     const palCheck = inputText => {
         let reveresedArray = [];
@@ -124,18 +131,13 @@ $(document).ready(function() {
 
     //return the first recurring character in a list
     function returnFirstRecurring(arry) {
+        console.log("running fucntion");
         for (i = 0; i < arry.length; i++) {
             if (arry.indexOf(arry[i]) < i) {
-                return arry[i];
-            } else {
-                ("no repeats");
+                alert(` first repeat is ${arry[i]}`);
+            } else if (i === arry.length - 1) {
+                alert("no repeats");
             }
         }
     }
-    console.log("expecting c to return");
-    console.log(returnFirstRecurring(["a", "b", "c", "c"]));
-    console.log("expecting a to return");
-    console.log(returnFirstRecurring(["a", "b", "a", "b"]));
-    console.log("expecting nothing to return");
-    console.log(returnFirstRecurring(["a"]));
 });
